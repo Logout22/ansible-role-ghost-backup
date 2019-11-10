@@ -1,38 +1,32 @@
-Role Name
-=========
+Ghost Backup
+============
 
-A brief description of the role goes here.
+A role to back up a Ghost blog as described on Ghost for Beginners.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Ghost needs to be set up and running in a local directory. Right now, only SQLite is supported.
+
+For instructions on how to set up Ghost, consult their excellent [documentation](https://ghost.org/docs/)
+or have a look at [Ghost for Beginners](https://www.ghostforbeginners.com/).
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+tbd
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+tbd
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+GPL3
