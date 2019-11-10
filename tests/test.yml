@@ -2,8 +2,8 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - geerlingguy.nodejs
-      nodejs_version: "10.x"
-      nodejs_npm_global_packages:
-        - name: ghost-cli
-    - ansible-role-ghost-backup
+  - role: geerlingguy.nodejs
+    nodejs_version: "10.x"
+    nodejs_npm_global_packages:
+      - name: ghost-cli
+  - role: ansible-role-ghost-backup
