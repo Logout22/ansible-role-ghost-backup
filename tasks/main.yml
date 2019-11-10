@@ -1,4 +1,2 @@
 ---
 # tasks file for ansible-role-ghost-backup
-- name: test travis
-  shell: echo "test travis"
