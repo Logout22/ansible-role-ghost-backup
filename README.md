@@ -21,7 +21,7 @@ tbd
 Dependencies
 ------------
 
-None
+- for tests: `geerlingguy.nodejs`
 
 Example Playbook
 ----------------
