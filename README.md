@@ -16,7 +16,13 @@ or have a look at [Ghost for Beginners](https://www.ghostforbeginners.com/).
 Role Variables
 --------------
 
-tbd
+The source directory to back up:
+
+    source_directory: /var/www/ghost
+
+The user account used for controlling Ghost:
+
+    user_name: ghost
 
 Dependencies
 ------------

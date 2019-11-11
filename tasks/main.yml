@@ -1,2 +1,17 @@
 ---
-# tasks file for ansible-role-ghost-backup
+- name: ensure user account exists
+  user:
+    name: "{{ user_name }}"
+- name: ensure source directory exists
+  file:
+    path: "{{ source_directory }}"
+    owner: "{{ user_name }}"
+    state: directory
+- name: ensure Ghost is installed in source directory
+  command: /bin/sh -lc "ghost install local"
+  become: yes
+  become_method: su
+  become_user: "{{ user_name }}"
+  args:
+    chdir: "{{ source_directory }}"
+    creates: "{{ source_directory }}/content"

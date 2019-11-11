@@ -1,2 +1,5 @@
 ---
-# defaults file for ansible-role-ghost-backup
+# The source directory to back up
+source_directory: /var/www/ghost
+# The user account used for controlling Ghost
+user_name: ghost
