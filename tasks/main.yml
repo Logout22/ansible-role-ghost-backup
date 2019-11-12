@@ -22,7 +22,7 @@
   ignore_errors: yes
 - name: stop Ghost before backup
   command: /bin/sh -lc "ghost stop"
-  when: "ghost_running.status == 200"
+  when: "ghost_running.status != -1"
   become: yes
   become_method: su
   become_user: "{{ user_name }}"
