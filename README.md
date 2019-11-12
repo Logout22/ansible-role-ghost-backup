@@ -24,6 +24,10 @@ The user account used for controlling Ghost:
 
     user_name: ghost
 
+The address of the local Ghost server:
+
+    ghost_address: http://localhost:2368/ghost/
+
 Dependencies
 ------------
 

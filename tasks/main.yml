@@ -15,3 +15,16 @@
   args:
     chdir: "{{ source_directory }}"
     creates: "{{ source_directory }}/content"
+- name: check if Ghost is running
+  uri:
+    url: "{{ ghost_address }}"
+  register: ghost_running
+  ignore_errors: yes
+- name: stop Ghost before backup
+  command: /bin/sh -lc "ghost stop"
+  when: "ghost_running.status == 200"
+  become: yes
+  become_method: su
+  become_user: "{{ user_name }}"
+  args:
+    chdir: "{{ source_directory }}"
