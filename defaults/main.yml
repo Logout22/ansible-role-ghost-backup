@@ -7,3 +7,7 @@ destination_file: /var/www/ghost.tar.gz
 user_name: ghost
 # The address of the local Ghost server
 ghost_address: http://localhost:2368/ghost/
+# Should Ghost be restarted after backup?
+# If set to True the previous state will be restored,
+# otherwise Ghost will always be off when the role has finished.
+restart_after_backup: False

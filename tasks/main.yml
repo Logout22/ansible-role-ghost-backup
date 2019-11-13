@@ -32,3 +32,11 @@
   archive:
     path: "{{ source_directory }}"
     dest: "{{ destination_file }}"
+- name: restart Ghost after backup
+  command: /bin/sh -lc "ghost start"
+  when: "{{ restart_after_backup }} and ghost_running.status != -1"
+  become: yes
+  become_method: su
+  become_user: "{{ user_name }}"
+  args:
+    chdir: "{{ source_directory }}"
