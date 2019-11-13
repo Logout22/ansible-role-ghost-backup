@@ -20,6 +20,10 @@ The source directory to back up:
 
     source_directory: /var/www/ghost
 
+The file name of the backup archive
+
+    destination_file: /var/www/ghost.tar.gz
+
 The user account used for controlling Ghost:
 
     user_name: ghost

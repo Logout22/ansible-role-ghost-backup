@@ -28,3 +28,7 @@
   become_user: "{{ user_name }}"
   args:
     chdir: "{{ source_directory }}"
+- name: create archive
+  archive:
+    path: "{{ source_directory }}"
+    dest: "{{ destination_file }}"
