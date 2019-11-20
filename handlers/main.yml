@@ -1,2 +1,19 @@
 ---
-# handlers file for ansible-role-ghost-backup
+- name: Install AWS S3 dependencies
+  pip:
+    name:
+      - boto
+      - boto3
+      - botocore
+  listen: archive changed
+  when: aws_s3_upload_enabled
+- name: Upload archive to S3
+  aws_s3:
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+    bucket: "{{ aws_s3_upload_bucket_name }}"
+    mode: put
+    src: "{{ destination_file }}"
+    object: "{{ destination_file }}"
+  listen: archive changed
+  when: aws_s3_upload_enabled
