@@ -1,10 +1,11 @@
 ---
 - name: Install AWS S3 dependencies
-  pip:
+  package:
     name:
-      - boto
-      - boto3
-      - botocore
+      - python-boto
+      - python-boto3
+      - python-botocore
+    state: present
   listen: archive changed
   when: aws_s3_upload_enabled
 - name: Upload archive to S3
