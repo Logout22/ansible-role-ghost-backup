@@ -33,14 +33,14 @@ The address of the local Ghost server:
     ghost_address: http://localhost:2368/ghost/
 
 Should Ghost be restarted after backup?
-If set to False, Ghost will be off when the role has finished,
-otherwise the previous state will be restored.
+By default, Ghost will be off when the role has finished.
+When this option is set, the previous state will be restored.
 
-    restart_after_backup: True
+    restart_after_backup: yes
 
-Warning: Setting this variable to True violates the idempotence
-principle: As Ghost always modifies its directory
-when it is started, setting `restart_after_backup` will result
+Warning: Setting this option violates the idempotence
+principle: Ghost always modifies its directory
+when it is started. Setting `restart_after_backup` will result
 in a backup archive which is outdated after the role has finished.
 Hence, it will always need updating when the role is run a second time
 on the same system.
