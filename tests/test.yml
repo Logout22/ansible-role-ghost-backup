@@ -7,3 +7,5 @@
     nodejs_npm_global_packages:
       - name: ghost-cli
   - role: ansible-role-ghost-backup
+    aws_s3_upload_enabled: yes
+    aws_s3_upload_bucket_name: "ansible-role-ghost-backup-test"

@@ -1,0 +1,16 @@
+---
+- name: Install AWS S3 dependencies
+  pip:
+    name:
+      - boto
+      - boto3
+      - botocore
+- name: Upload archive to S3
+  aws_s3:
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+    bucket: "{{ aws_s3_upload_bucket_name }}"
+    mode: put
+    src: "{{ destination_file }}"
+    object: "{{ destination_file }}"
+  when: archive_creation.changed

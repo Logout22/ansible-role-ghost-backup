@@ -1,0 +1,4 @@
+---
+- import_tasks: 10_archive.yml
+- import_tasks: 20_upload.yml
+  when: aws_s3_upload_enabled

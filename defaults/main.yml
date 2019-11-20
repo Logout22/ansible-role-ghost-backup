@@ -7,6 +7,15 @@ destination_file: /var/www/ghost.tar.gz
 user_name: ghost
 # The address of the local Ghost server
 ghost_address: http://localhost:2368/ghost/
+# Enable upload of archive to AWS S3 bucket
+# specified in aws_s3_upload_bucket_name option
+aws_s3_upload_enabled: no
+# Optional: Name of AWS S3 bucket used as target for upload
+aws_s3_upload_bucket_name: ""
+# Optional: AWS access key used for S3 put operation
+aws_access_key: ""
+# Optional: AWS secret key used for S3 put operation
+aws_secret_key: ""
 # Should Ghost be restarted after backup?
 # By default, Ghost will be off when the role has finished.
 # When this option is set, the previous state will be restored.

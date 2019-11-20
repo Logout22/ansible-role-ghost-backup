@@ -20,7 +20,7 @@ The source directory to back up:
 
     source_directory: /var/www/ghost
 
-The file name of the backup archive
+The file name of the backup archive:
 
     destination_file: /var/www/ghost.tar.gz
 
@@ -31,6 +31,16 @@ The user account used for controlling Ghost:
 The address of the local Ghost server:
 
     ghost_address: http://localhost:2368/ghost/
+
+Enable upload of archive to AWS S3 bucket:
+
+    aws_s3_upload_enabled: no
+
+Optional: AWS S3 credentials used for upload:
+
+    aws_s3_upload_bucket_name: ""
+    aws_access_key: ""
+    aws_secret_key: ""
 
 Should Ghost be restarted after backup?
 By default, Ghost will be off when the role has finished.
