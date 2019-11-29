@@ -65,7 +65,21 @@ Dependencies
 Example Playbook
 ----------------
 
-tbd
+For AWS upload to work,
+make sure that Python and pip are installed on your hosts.
+
+    ---
+    - hosts: all
+      roles:
+      - role: ansible-role-ghost-backup
+        destination_file: /home/ubuntu/ghost.tar.gz
+        user_name: ubuntu
+        aws_s3_upload_enabled: yes
+        aws_s3_upload_bucket_name: "my-bucket-for-backup"
+
+Invoke this playbook passing your AWS key and secret key:
+
+    ansible-playbook -e aws_access_key=$AWS_ACCESS_KEY_ID -e aws_secret_key=$AWS_SECRET_ACCESS_KEY playbook.yml
 
 License
 -------
