@@ -1,8 +1,6 @@
 Ghost Backup
 ============
 
-[![Build Status](https://travis-ci.org/Logout22/ansible-role-ghost-backup.svg?branch=master)](https://travis-ci.org/Logout22/ansible-role-ghost-backup)
-
 A role to back up a Ghost blog as described on Ghost for Beginners.
 
 Requirements
