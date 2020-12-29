@@ -7,6 +7,7 @@
     path: "{{ source_directory }}"
     owner: "{{ user_name }}"
     state: directory
+    mode: 0755
 - name: ensure Ghost is installed in source directory
   command: /bin/sh -lc "ghost install local"
   become: yes
@@ -32,6 +33,7 @@
   archive:
     path: "{{ source_directory }}"
     dest: "{{ destination_file }}"
+    mode: 0644
   notify: archive changed
 - name: restart Ghost after backup
   command: /bin/sh -lc "ghost start"

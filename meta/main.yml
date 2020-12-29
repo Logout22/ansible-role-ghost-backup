@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: ghost_backup
   author: Martin Unzner
   description: A role to back up a Ghost blog as described on Ghost for Beginners
   license: GPL-3.0-only
