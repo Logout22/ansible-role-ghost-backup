@@ -14,7 +14,7 @@
   listen: archive changed
   when: aws_s3_upload_enabled
 - name: Upload archive to S3
-  aws_s3:
+  amazon.aws.aws_s3:
     aws_access_key: "{{ aws_access_key }}"
     aws_secret_key: "{{ aws_secret_key }}"
     bucket: "{{ aws_s3_upload_bucket_name }}"
